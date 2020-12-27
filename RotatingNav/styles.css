@@ -40,8 +40,8 @@ body {
   transition: transform 0.5s linear;
 }
 
-.container.show-nav .circle{
-transform: rotate(-70deg);
+.container.show-nav .circle {
+  transform: rotate(-70deg);
 }
 
 .circle button {
@@ -123,11 +123,56 @@ nav ul li + li {
 }
 
 nav ul li + li + li {
-  margin-left:30px;
+  margin-left: 30px;
   transform: translateX(-200%);
 }
 
-.container.show-nav + nav li{
-  transform:translateX(0);
-  transition-delay: 0.5s ;
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.5s;
+}
+
+/*search*/
+
+.search {
+  margin-right: 40px;
+  float: right;
+  position: relative;
+  height: 50px;
+}
+
+.search .input {
+  background-color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease-in;
+}
+
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease-in;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(198px);
 }
